@@ -28,25 +28,33 @@ Con esa información es posible usar características adicionales y que son calc
 * Sincronizar datos con Dropbox etc
 * Recordatorios de mantenimiento
 
+![](assets/caracteristicas3.png)
+
+La aplicación cuenta con `52` reviews y una calificación de `4.1` en Google Play.
+
+![](assets/caracteristicas1.png)
+
 **Permisos Requeridos:** _Network access_: Usado para sincronizar con Dropbox/Google Drive/WebDAV. _Manage acounts_. _Escritura en SD_. _Run at startup_: Usado para mostrar recordatorios cuando se reinice el dispositivo.
 
-android.permission.WRITE_EXTERNAL_STORAGE
-android.permission.INTERNET
-android.permission.READ_SYNC_SETTINGS
-android.permission.WRITE_SYNC_SETTINGS
-android.permission.READ_SYNC_STATS
-android.permission.GET_ACCOUNTS (?)
-android.permission.MANAGE_ACCOUNTS (?)
-android.permission.AUTHENTICATE_ACCOUNTS (?)
-android.permission.USE_CREDENTIALS (?)
-android.permission.RECEIVE_BOOT_COMPLETED
-android.permission.READ_EXTERNAL_STORAGE
+* android.permission.WRITE_EXTERNAL_STORAGE
+* android.permission.INTERNET
+* android.permission.READ_SYNC_SETTINGS
+* android.permission.WRITE_SYNC_SETTINGS
+* android.permission.READ_SYNC_STATS
+* android.permission.GET_ACCOUNTS (?)
+* android.permission.MANAGE_ACCOUNTS (?)
+* android.permission.AUTHENTICATE_ACCOUNTS (?)
+* android.permission.USE_CREDENTIALS (?)
+* android.permission.RECEIVE_BOOT_COMPLETED
+* android.permission.READ_EXTERNAL_STORAGE
 
 **Licencia:** Apache License 2.0 
 
 **Version:** 3.19.0 liberada el 2018-03-15
 
 **Version de Android mínima:** 4.0.3
+
+![](assets/caracteristicas2.png)
 
 ## Contexto
 
@@ -104,3 +112,12 @@ El proceso de pruebas comienza el día 9/5/18 a las 19:30 y acaba el día 14/5/1
 ## Referencias
 
 * [Car Report](https://f-droid.org/en/packages/me.kuehle.carreport/)
+* [Car Report - Google Play](https://play.google.com/store/apps/details?id=me.kuehle.carreport)
+* [Car Report - BitBucket repo](https://bitbucket.org/frigus02/car-report)
+
+Proceso
+1. Instalar APK
+2. Ejecutar pruebas con calabash => instala la app
+3. Ejecutar random testing
+4. ejecutar pruebas unitarias
+
