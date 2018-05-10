@@ -77,7 +77,7 @@ android.permission.READ_EXTERNAL_STORAGE
 
 **Hardware:**
 
-* Computador Mac con sistema operativo OSX High Sierra, 16GB RAM, 256GB estado solido.
+* Computador Mac con sistema operativo OSX High Sierra, 16GB RAM, 512GB estado solido, core i7.
 * Celular Xperia Z3 con sistema operativo Android Oreo.
 * Emulador Nexus 5, API 26, Android 8.0, 2GB
 
@@ -89,6 +89,7 @@ android.permission.READ_EXTERNAL_STORAGE
 * Car Report APK's mutantes provistos por el monitor de la clase como la versión inestable de la aplicación.
 * Calabash para automatización de pruebas sobre Android
 * GifRecoder para grabar evidencia de ejecución de pruebas de aceptación, errores de ejecución etc.
+* Aplicación original descargada y compilada desde el repositorio base.
 
 **Recurso Humano:**
 
