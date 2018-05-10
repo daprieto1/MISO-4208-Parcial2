@@ -76,10 +76,29 @@ android.permission.READ_EXTERNAL_STORAGE
 ### Infraestructura de pruebas
 
 **Hardware:**
+
+* Computador Mac con sistema operativo OSX High Sierra, 16GB RAM, 256GB estado solido.
+* Celular Xperia Z3 con sistema operativo Android Oreo.
+* Emulador Nexus 5, API 26, Android 8.0, 2GB
+
 **Software:**
+
+* Android Studio
+* adb
+* Car Report original APK provista por el monitor de la clase como la versión estable de la aplicación.
+* Car Report APK's mutantes provistos por el monitor de la clase como la versión inestable de la aplicación.
+* Calabash para automatización de pruebas sobre Android
+* GifRecoder para grabar evidencia de ejecución de pruebas de aceptación, errores de ejecución etc.
+
 **Recurso Humano:**
 
+1 desarrollador trabajando 2 horas diarias durante 5 días continuos.
+
 ### Calendario e integración con desarrollo
+
+No va a existir integración con desarrollo aunque de ser posible _issues_ pueden ser reportados en el repositorio de código fuente de la aplicación.
+
+El proceso de pruebas comienza el día 9/5/18 a las 19:30 y acaba el día 14/5/18 a las 23:55.
 
 ## Referencias
 
