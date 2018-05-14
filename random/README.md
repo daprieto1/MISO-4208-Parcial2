@@ -10,7 +10,7 @@ Se probaron varias opciones para crear el comando que generara la mayor cantidad
 ./adb shell monkey \
 -p me.kuehle.carreport \
 -s 34567654 \
---pct-touch 75 --pct-motion 0 --pct-trackball 25 --pct-nav 0 --pct-appswitch 0 --pct-anyevent 0 --pct-majornav 0 --pct-syskeys 0 -v 100000 
+--pct-touch 75 --pct-motion 0 --pct-trackball 25 --pct-nav 0 --pct-appswitch 0 --pct-anyevent 0 --pct-majornav 0 --pct-syskeys 0 -v --ignore-crashes 100000 > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/random.out
 ```
 
 Se establecio `100000` como el número de eventos a generar sobre cada uno de los APK's provistos debido a que la duración de una ejecución toma alrededor de `4 minutos` si no ocurre un error antes.
