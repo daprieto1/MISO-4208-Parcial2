@@ -2,14 +2,6 @@
 
 ---
 
-apps:
-* cabalash
-* adb events
-* barista
-* android recorder / runner
-* reran
-* android junit runner
-
 ## Cracterísticas de la App
 
 **Car Report**
@@ -64,14 +56,11 @@ La aplicación cuenta con `52` reviews y una calificación de `4.1` en Google Pl
 * Evaluar la calidad de la suite de pruebas usando un proceso de Mutation Testing.
 * Evaluar la tolerancia a fallos de la aplicación realizando un proceso de Random Testing sobre los mutantes generados, de lat forma se logrará medir la capacidad funcional de la aplicación con defectos inyectados.
 * Reportar posibles puntos de mejora sobre la suite de pruebas para que sea más madura.
-* Reportar en GitHub
+* Reportar en BitBucket
 * Automatizar escenarios básicos que no esten contemplados en la suite de pruebas y que pueden ser incluidos
+* Construir una aplicación que automatice la prueba sobre los mutantes
 
 ### Niveles y tipos de prueba
-
-**Unitarias**
-
-* Se ejecutarán las pruebas unitarias que están incluidas en el APK para cada mutante.
 
 **Sistema**
 
@@ -118,7 +107,18 @@ El proceso a seguir para encontrar los defectos detectados en los mutantes es:
 
 * Primero se va a realizar el proceso sobre el APK original con el objetivo de encontrar una muestra base del comportamiento de la aplicación sin defectos inyectados, esta prueba inicial busca determinar la cantidad de defectos que pueden ser hallados usando las pruebas unitarias del desarrollador inicial, las pruebas de Calabash codificadas por mi y una seria de eventos aleatorios generados por la herramienta de random testing de android.
 
+## Informe de Pruebas de Aceptación
+
+---
+
+Se realizo un informe completo de todas las funcionalidades disponibles sobre Car Report.
+
 ## Resultados
+
+* PRUEBAS CON CALABASH - [más información](calabash/README.md)
+* RANDOM TESTING - [más información](random/README.md)
+
+---
 
 | APK | Calabash Escenarios | Cabalash duración |Random Error | random duración|conclusión |
 |---|---|---|---|---|---|
@@ -192,12 +192,14 @@ El proceso a seguir para encontrar los defectos detectados en los mutantes es:
 |340 mutante|19/19|3m13.269s||||
 |341 mutante|19/19|3m20.177s||||
 |342 mutante|19/19|3m17.904s||||
-|346 mutante|/19|||||
-|347 mutante|/19|||||
-|352 mutante|/19|||||
-|354 mutante|/19|||||
+|346 mutante|19/19|4m18.752s||||
+|347 mutante|19/19|3m19.541s||||
+|352 mutante|19/19|3m18.630s||||
+|354 mutante|19/19|7m47.217s||||
 
 ## Issues en repositorio de Car Report
+
+---
 
 ### Random Testing
 
@@ -229,7 +231,47 @@ Usted puede acceder al issue en la siguiente [URL](https://bitbucket.org/frigus0
 
 ![](assets/issue3.png)
 
+## Herramienta de automatización - [más información](automationApp/README.md)
+
+---
+
+Se realizo una herramienta de automatización sobre comando bash que hace lo siguiente:
+
+1. Crear cartpeta de resultados del mutante
+2. Copiar el APK del mutante
+3. Firmal el APK, debido a que la copia firmada no funcionaba
+4. Ejecutar las pruebas de Calabash
+5. Copiar los resultados de Calabash
+6. Abrir la aplicación con su actividad principal
+7. Ejecutar random testing
+8. Guardar los resultados de random testing
+9. Limpiar
+
+## Conclusiones
+
+---
+
+### BDT
+
+* Todos los escenarios de pruebas que quicieran explorar la aplicación de forma profunda, es decir más allá de la pantalla inicial, deben contemplar el hecho de tener por lo menos 1 carro agregado al sistema.
+* Los escenarios de pruebas construidos en Calabash eran buenos para detectar problemas con: el cambio de ID's de los elementos, cambios en los textos del menú, navegación completa y cambio entre actividades.
+* Los escenarios propuestos no eran buenos detectando mutantes visuales, es decir cambios en colores o posiciones.
+
+### Random Testing
+
+* La aplicación original cuenta con un fallo que en ocasiones detecta en monkey de Android y produce que la aplicación se cierra dañando la prueba, sin embargo cambiando la semilla para el APK bajo pruebas, se podia completar el esenario completo, por lo cual las pruebas de random testing son costosas en tiempo porque deben ser bien estructuradas para evitar encontrar errores conocidos y poder explorar la aplicaciñon más allá de esa barrera.
+
+### Repositorio
+
+* Se ha iniciado un hilo de conversación con el dueño de la aplicación para hacer un pull request incluyendo las pruebas de Calabash en el repositorio original así como un sistema de monkey testing.
+
+### Usabilidad
+
+* Los comentarios de una persona que esta acostumbrada a manejar dispositivos móviles como Celulares de corte Android sobre la usabilidad de la aplicación no son buenos evidenciando grandes problemas conceptuales, cambios de moneda, navegabilidad y fácilidad para encontrar la información.
+
 ## Referencias
+
+---
 
 * [Car Report](https://f-droid.org/en/packages/me.kuehle.carreport/)
 * [Car Report - Google Play](https://play.google.com/store/apps/details?id=me.kuehle.carreport)

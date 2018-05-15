@@ -1,0 +1,216 @@
+No test server found for this combination of app and calabash version. Recreating test server.
+Done signing the test server. Moved it to test_servers/f74cf85e07fa89790907a97a458523dd_0.9.2.apk
+Feature: About
+
+  Scenario: Create Car first time                                 # features/about.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario: About                           # features/about.feature:10
+    When I swipe left                       # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "Settings" text         # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "About Car Report" text # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "LICENSES" button       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    Then I press the "OK" button            # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+      map android.widget.Button {text CONTAINS[c] 'OK'}, query failed because: java.util.concurrent.TimeoutException
+       (RuntimeError)
+      features/about.feature:15:in `Then I press the "OK" button'
+
+Feature: Add Data
+
+  Scenario: Create Car first time                                 # features/addData.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+      map android.widget.EditText id:'edt_name', query failed because: java.util.concurrent.TimeoutException
+       (RuntimeError)
+      features/addData.feature:5:in `And I enter text "car 0" into field with id "edt_name"'
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario Outline: Add Refueling                                 # features/addData.feature:10
+    When I click on screen 86% from the left and 91% from the top # features/addData.feature:11
+    And I touch the "Refueling" text                              # features/addData.feature:12
+    And I enter text <mileage> into field with id "edt_mileage"   # features/addData.feature:13
+    And I enter text <volume> into field with id "edt_volume"     # features/addData.feature:14
+    And I enter text <price> into field with id "edt_price"       # features/addData.feature:15
+    And I scroll down                                             # features/addData.feature:16
+    And I press "edt_time"                                        # features/addData.feature:17
+    And I press the "OK" button                                   # features/addData.feature:18
+    And I press "edt_date"                                        # features/addData.feature:19
+    And I press the "OK" button                                   # features/addData.feature:20
+    And I press "menu_save"                                       # features/addData.feature:21
+
+    Examples: 
+      | mileage | volume | price |
+      | "10"    | "20"   | "30"  |
+      Timeout waiting for elements: android.widget.EditText id:'edt_mileage' (Calabash::Android::WaitHelpers::WaitError)
+      features/addData.feature:25:in `And I enter text "10" into field with id "edt_mileage"'
+      features/addData.feature:13:in `And I enter text <mileage> into field with id "edt_mileage"'
+      | "15"    | "10"   | "31"  |
+      Timeout waiting for elements: android.widget.EditText id:'edt_mileage' (Calabash::Android::WaitHelpers::WaitError)
+      features/addData.feature:26:in `And I enter text "15" into field with id "edt_mileage"'
+      features/addData.feature:13:in `And I enter text <mileage> into field with id "edt_mileage"'
+
+  Scenario Outline: Add Other expenditure                         # features/addData.feature:28
+    When I click on screen 86% from the left and 91% from the top # features/addData.feature:29
+    And I touch the "Other expenditure" text                      # features/addData.feature:30
+    And I enter text <title> into field with id "edt_title"       # features/addData.feature:31
+    And I enter text <mileage> into field with id "edt_mileage"   # features/addData.feature:32
+    And I enter text <price> into field with id "edt_price"       # features/addData.feature:33
+    And I scroll down                                             # features/addData.feature:34
+    And I touch the "Once" text                                   # features/addData.feature:35
+    Then I see the text "Once"                                    # features/addData.feature:36
+    And I see the text "Repeat every day"                         # features/addData.feature:37
+    And I see the text "Repeat every month"                       # features/addData.feature:38
+    And I see the text "Repeat every quarter"                     # features/addData.feature:39
+    And I see the text "Repeat every year"                        # features/addData.feature:40
+    And I touch the "Once" text                                   # features/addData.feature:41
+    And I press "edt_time"                                        # features/addData.feature:42
+    And I press the "OK" button                                   # features/addData.feature:43
+    And I press "edt_date"                                        # features/addData.feature:44
+    And I press the "OK" button                                   # features/addData.feature:45
+    And I press "menu_save"                                       # features/addData.feature:46
+
+    Examples: 
+      | mileage | title | price |
+      | "10"    | "t1"  | "30"  |
+      Timeout waiting for elements: * {text CONTAINS[c] 'Other expenditure'} (Calabash::Android::WaitHelpers::WaitError)
+      features/addData.feature:50:in `And I touch the "Other expenditure" text'
+      features/addData.feature:30:in `And I touch the "Other expenditure" text'
+      | "15"    | "t2"  | "31"  |
+      Timeout waiting for elements: * {text CONTAINS[c] 'Other expenditure'} (Calabash::Android::WaitHelpers::WaitError)
+      features/addData.feature:51:in `And I touch the "Other expenditure" text'
+      features/addData.feature:30:in `And I touch the "Other expenditure" text'
+
+  Scenario Outline: Add Other income                              # features/addData.feature:53
+    When I click on screen 86% from the left and 91% from the top # features/addData.feature:54
+    And I touch the "Other income" text                           # features/addData.feature:55
+    And I enter text <title> into field with id "edt_title"       # features/addData.feature:56
+    And I enter text <mileage> into field with id "edt_mileage"   # features/addData.feature:57
+    And I enter text <price> into field with id "edt_price"       # features/addData.feature:58
+    And I scroll down                                             # features/addData.feature:59
+    And I touch the "Once" text                                   # features/addData.feature:60
+    Then I see the text "Once"                                    # features/addData.feature:61
+    And I see the text "Repeat every day"                         # features/addData.feature:62
+    And I see the text "Repeat every month"                       # features/addData.feature:63
+    And I see the text "Repeat every quarter"                     # features/addData.feature:64
+    And I see the text "Repeat every year"                        # features/addData.feature:65
+    And I touch the "Once" text                                   # features/addData.feature:66
+    And I press "edt_time"                                        # features/addData.feature:67
+    And I press the "OK" button                                   # features/addData.feature:68
+    And I press "edt_date"                                        # features/addData.feature:69
+    And I press the "OK" button                                   # features/addData.feature:70
+    And I press "menu_save"                                       # features/addData.feature:71
+
+    Examples: 
+      | mileage | title | price |
+      | "10"    | "t1"  | "30"  |
+      Timeout waiting for elements: * {text CONTAINS[c] 'Other income'} (Calabash::Android::WaitHelpers::WaitError)
+      features/addData.feature:75:in `And I touch the "Other income" text'
+      features/addData.feature:55:in `And I touch the "Other income" text'
+      | "15"    | "t2"  | "31"  |
+      Timeout waiting for elements: * {text CONTAINS[c] 'Other income'} (Calabash::Android::WaitHelpers::WaitError)
+      features/addData.feature:76:in `And I touch the "Other income" text'
+      features/addData.feature:55:in `And I touch the "Other income" text'
+
+  Scenario: See data                          # features/addData.feature:78
+    When I swipe left                         # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "car 0" text              # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+      Timeout waiting for elements: * {text CONTAINS[c] 'car 0'} (Calabash::Android::WaitHelpers::WaitError)
+      features/addData.feature:80:in `And I touch the "car 0" text'
+    And I touch the "OTHER EXPENDITURES" text # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "OTHER INCOME" text       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "REFUELINGS" text         # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+
+Feature: backup and export
+
+  Scenario: Create Car first time                                 # features/backupAndExport.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+      map android.widget.EditText id:'edt_name', query failed because: java.util.concurrent.TimeoutException
+       (RuntimeError)
+      features/backupAndExport.feature:5:in `And I enter text "car 0" into field with id "edt_name"'
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+android.os.DeadObjectException
+	at android.os.BinderProxy.transactNative(Native Method)
+	at android.os.BinderProxy.transact(Binder.java:748)
+	at android.app.IActivityManager$Stub$Proxy.startInstrumentation(IActivityManager.java:5074)
+	at com.android.commands.am.Instrument.run(Instrument.java:408)
+	at com.android.commands.am.Am.runInstrument(Am.java:232)
+	at com.android.commands.am.Am.onRun(Am.java:125)
+	at com.android.internal.os.BaseCommand.run(BaseCommand.java:54)
+	at com.android.commands.am.Am.main(Am.java:95)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:284)
+  Scenario: backup and restore                                                    # features/backupAndExport.feature:10
+  Could not execute command to start test server (RuntimeError)
+  ./features/support/app_life_cycle_hooks.rb:5:in `Before'
+    When I swipe left                                                             # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "Settings" text                                               # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Backup & Export" text                                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Backup the current data to SD card." text                    # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "OVERWRITE" button                                            # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    Then I see the text "Backup to file carreport.backup completed successfully." # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+    And I touch the "Restore data from file carreport.backup on SD card." text    # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "RESTORE" button                                              # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I see the text "Restore completed successfully"                           # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+Error type 2
+android.util.AndroidException: Can't connect to activity manager; is the system running?
+	at com.android.commands.am.Am.onRun(Am.java:113)
+	at com.android.internal.os.BaseCommand.run(BaseCommand.java:54)
+	at com.android.commands.am.Am.main(Am.java:95)
+	at com.android.internal.os.RuntimeInit.nativeFinishInit(Native Method)
+	at com.android.internal.os.RuntimeInit.main(RuntimeInit.java:284)
+  Scenario: export and import                                       # features/backupAndExport.feature:21
+  Could not execute command to start test server (RuntimeError)
+  ./features/support/app_life_cycle_hooks.rb:5:in `Before'
+    When I swipe left                                               # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "Settings" text                                 # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Backup & Export" text                          # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Export CSV" text                               # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "OVERWRITE" button                              # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    Then I see the text "Export to SD card completed successfully." # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+    And I scroll down                                               # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:36
+    And I touch the "Import CSV" text                               # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "IMPORT" button                                 # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I see the text "Import completed successfully"              # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+Feature: Create Car
+
+  Scenario: Create Car first time                                 # features/createCar.feature:3
+  undefined method `chomp' for nil:NilClass (NoMethodError)
+  ./features/support/app_installation_hooks.rb:18:in `Before'
+  Will not start test server because of previous failures. (RuntimeError)
+  ./features/support/app_life_cycle_hooks.rb:5:in `Before'
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+Failing Scenarios:
+cucumber features/about.feature:10 # Scenario: About
+cucumber features/addData.feature:3 # Scenario: Create Car first time
+cucumber features/addData.feature:25 # Scenario Outline: Add Refueling, Examples (#1)
+cucumber features/addData.feature:26 # Scenario Outline: Add Refueling, Examples (#2)
+cucumber features/addData.feature:50 # Scenario Outline: Add Other expenditure, Examples (#1)
+cucumber features/addData.feature:51 # Scenario Outline: Add Other expenditure, Examples (#2)
+cucumber features/addData.feature:75 # Scenario Outline: Add Other income, Examples (#1)
+cucumber features/addData.feature:76 # Scenario Outline: Add Other income, Examples (#2)
+cucumber features/addData.feature:78 # Scenario: See data
+cucumber features/backupAndExport.feature:3 # Scenario: Create Car first time
+cucumber features/backupAndExport.feature:10 # Scenario: backup and restore
+cucumber features/backupAndExport.feature:21 # Scenario: export and import
+cucumber features/createCar.feature:3 # Scenario: Create Car first time
+
+14 scenarios (13 failed, 1 passed)
+143 steps (10 failed, 113 skipped, 20 passed)
+8m48.328s

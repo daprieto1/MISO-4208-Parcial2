@@ -1,0 +1,89 @@
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/325-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/325-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk325/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/325-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/334-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/334-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk334/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/334-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/335-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/335-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk335/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/335-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/338-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/338-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk338/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/338-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/340-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/340-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk340/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/340-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/341-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/341-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk341/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/341-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/342-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/342-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk342/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/342-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/346-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/346-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk346/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/346-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/347-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/347-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk347/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/347-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/352-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/352-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk352/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/352-mutante/calabash.out
+
+
+ mkdir /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/354-mutante
+ cp /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/9-mutante.1/README.md /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/354-mutante/README.md
+ rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cp /Users/diegoprietotorres/Downloads/apks/apk354/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk
+ cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/354-mutante/calabash.out
+
+

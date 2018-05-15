@@ -1,4 +1,4 @@
-var nrc = require('node-run-cmd');
+var nrc;
 var fs = require('fs');
 
 var createFolder = path => {
@@ -35,7 +35,7 @@ var executeCommand = command => {
     });
 };
 
-var mutants = [61, 62]
+var mutants = [325, 334, 335, 338, 340, 341, 342, 346, 347, 352, 354]
 var command = '';
 mutants.forEach(mutant => {
     var mutantsPath = '/Users/diegoprietotorres/Downloads/apks'
@@ -43,14 +43,14 @@ mutants.forEach(mutant => {
     var mutantFolder = `/Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/resultados/${mutant}-mutante`
 
 
-    command += `\n mkdir ${mutantFolder} && \\`
-    command += `\n cp ${readmePath} ${mutantFolder}/README.md && \\`
-    command += `\n rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk && \\`
-    command += `\n cp ${mutantsPath}/apk${mutant}/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk && \\`
-    command += `\n cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk && \\`
-    command += `\n cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > ${mutantFolder}/calabash.out && \\`
-    command += `\n cd /Users/diegoprietotorres/Library/Android/sdk/platform-tools && ./adb shell am start -n me.kuehle.carreport/me.kuehle.carreport.gui.MainActivity && \\`
-    command += `\n cd /Users/diegoprietotorres/Library/Android/sdk/platform-tools && ./adb shell monkey -p me.kuehle.carreport -s 34567654 --pct-touch 75 --pct-motion 0 --pct-trackball 25 --pct-nav 0 --pct-appswitch 0 --pct-anyevent 0 --pct-majornav 0 --pct-syskeys 0 -v --ignore-crashes 100 > ${mutantFolder}/random.out`
+    command += `\n mkdir ${mutantFolder}`
+    command += `\n cp ${readmePath} ${mutantFolder}/README.md`
+    command += `\n rm /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk`
+    command += `\n cp ${mutantsPath}/apk${mutant}/me.kuehle.carreport_69.apk /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash/me.kuehle.carreport_69.apk`
+    command += `\n cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android resign me.kuehle.carreport_69.apk`
+    command += `\n cd /Users/diegoprietotorres/Documents/programs/MISO-4208-Parcial2/calabash && calabash-android run me.kuehle.carreport_69.apk > ${mutantFolder}/calabash.out`
+    command += `\n cd /Users/diegoprietotorres/Library/Android/sdk/platform-tools && ./adb shell am start -n me.kuehle.carreport/me.kuehle.carreport.gui.MainActivity  \n `
+    command += `\n cd /Users/diegoprietotorres/Library/Android/sdk/platform-tools && ./adb shell monkey -p me.kuehle.carreport -s 34567654 --pct-touch 75 --pct-motion 0 --pct-trackball 25 --pct-nav 0 --pct-appswitch 0 --pct-anyevent 0 --pct-majornav 0 --pct-syskeys 0 -v --ignore-crashes 100000 > ${mutantFolder}/random.out \n `
     command += '\n\n'
 });
 

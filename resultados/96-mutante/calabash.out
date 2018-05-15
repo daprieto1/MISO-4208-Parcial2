@@ -1,0 +1,21 @@
+No test server found for this combination of app and calabash version. Recreating test server.
+Done signing the test server. Moved it to test_servers/e68e0d486e093ec621e99ab9605cb663_0.9.2.apk
+Feature: About
+
+  Scenario: Create Car first time                                 # features/about.feature:3
+  undefined method `chomp' for nil:NilClass (NoMethodError)
+  ./features/support/app_installation_hooks.rb:18:in `Before'
+  Will not start test server because of previous failures. (RuntimeError)
+  ./features/support/app_life_cycle_hooks.rb:5:in `Before'
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+Failing Scenarios:
+cucumber features/about.feature:3 # Scenario: Create Car first time
+
+1 scenario (1 failed)
+5 steps (5 skipped)
+0m7.917s

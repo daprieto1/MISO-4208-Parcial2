@@ -1,0 +1,221 @@
+No test server found for this combination of app and calabash version. Recreating test server.
+Done signing the test server. Moved it to test_servers/ce22b5b5b7d2414d42ac97e4a5443a46_0.9.2.apk
+Feature: About
+
+  Scenario: Create Car first time                                 # features/about.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario: About                           # features/about.feature:10
+    When I swipe left                       # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "Settings" text         # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "About Car Report" text # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "LICENSES" button       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    Then I press the "OK" button            # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+
+Feature: Add Data
+
+  Scenario: Create Car first time                                 # features/addData.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario Outline: Add Refueling                                 # features/addData.feature:10
+    When I click on screen 86% from the left and 91% from the top # features/addData.feature:11
+    And I touch the "Refueling" text                              # features/addData.feature:12
+    And I enter text <mileage> into field with id "edt_mileage"   # features/addData.feature:13
+    And I enter text <volume> into field with id "edt_volume"     # features/addData.feature:14
+    And I enter text <price> into field with id "edt_price"       # features/addData.feature:15
+    And I scroll down                                             # features/addData.feature:16
+    And I press "edt_time"                                        # features/addData.feature:17
+    And I press the "OK" button                                   # features/addData.feature:18
+    And I press "edt_date"                                        # features/addData.feature:19
+    And I press the "OK" button                                   # features/addData.feature:20
+    And I press "menu_save"                                       # features/addData.feature:21
+
+    Examples: 
+      | mileage | volume | price |
+      | "10"    | "20"   | "30"  |
+      | "15"    | "10"   | "31"  |
+
+  Scenario Outline: Add Other expenditure                         # features/addData.feature:28
+    When I click on screen 86% from the left and 91% from the top # features/addData.feature:29
+    And I touch the "Other expenditure" text                      # features/addData.feature:30
+    And I enter text <title> into field with id "edt_title"       # features/addData.feature:31
+    And I enter text <mileage> into field with id "edt_mileage"   # features/addData.feature:32
+    And I enter text <price> into field with id "edt_price"       # features/addData.feature:33
+    And I scroll down                                             # features/addData.feature:34
+    And I touch the "Once" text                                   # features/addData.feature:35
+    Then I see the text "Once"                                    # features/addData.feature:36
+    And I see the text "Repeat every day"                         # features/addData.feature:37
+    And I see the text "Repeat every month"                       # features/addData.feature:38
+    And I see the text "Repeat every quarter"                     # features/addData.feature:39
+    And I see the text "Repeat every year"                        # features/addData.feature:40
+    And I touch the "Once" text                                   # features/addData.feature:41
+    And I press "edt_time"                                        # features/addData.feature:42
+    And I press the "OK" button                                   # features/addData.feature:43
+    And I press "edt_date"                                        # features/addData.feature:44
+    And I press the "OK" button                                   # features/addData.feature:45
+    And I press "menu_save"                                       # features/addData.feature:46
+
+    Examples: 
+      | mileage | title | price |
+      | "10"    | "t1"  | "30"  |
+      | "15"    | "t2"  | "31"  |
+
+  Scenario Outline: Add Other income                              # features/addData.feature:53
+    When I click on screen 86% from the left and 91% from the top # features/addData.feature:54
+    And I touch the "Other income" text                           # features/addData.feature:55
+    And I enter text <title> into field with id "edt_title"       # features/addData.feature:56
+    And I enter text <mileage> into field with id "edt_mileage"   # features/addData.feature:57
+    And I enter text <price> into field with id "edt_price"       # features/addData.feature:58
+    And I scroll down                                             # features/addData.feature:59
+    And I touch the "Once" text                                   # features/addData.feature:60
+    Then I see the text "Once"                                    # features/addData.feature:61
+    And I see the text "Repeat every day"                         # features/addData.feature:62
+    And I see the text "Repeat every month"                       # features/addData.feature:63
+    And I see the text "Repeat every quarter"                     # features/addData.feature:64
+    And I see the text "Repeat every year"                        # features/addData.feature:65
+    And I touch the "Once" text                                   # features/addData.feature:66
+    And I press "edt_time"                                        # features/addData.feature:67
+    And I press the "OK" button                                   # features/addData.feature:68
+    And I press "edt_date"                                        # features/addData.feature:69
+    And I press the "OK" button                                   # features/addData.feature:70
+    And I press "menu_save"                                       # features/addData.feature:71
+
+    Examples: 
+      | mileage | title | price |
+      | "10"    | "t1"  | "30"  |
+      | "15"    | "t2"  | "31"  |
+
+  Scenario: See data                          # features/addData.feature:78
+    When I swipe left                         # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "car 0" text              # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "OTHER EXPENDITURES" text # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "OTHER INCOME" text       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "REFUELINGS" text         # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+
+Feature: backup and export
+
+  Scenario: Create Car first time                                 # features/backupAndExport.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario: backup and restore                                                    # features/backupAndExport.feature:10
+    When I swipe left                                                             # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "Settings" text                                               # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Backup & Export" text                                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Backup the current data to SD card." text                    # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "OVERWRITE" button                                            # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    Then I see the text "Backup to file carreport.backup completed successfully." # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+    And I touch the "Restore data from file carreport.backup on SD card." text    # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "RESTORE" button                                              # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I see the text "Restore completed successfully"                           # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario: export and import                                       # features/backupAndExport.feature:21
+    When I swipe left                                               # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:15
+    And I touch the "Settings" text                                 # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Backup & Export" text                          # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I touch the "Export CSV" text                               # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "OVERWRITE" button                              # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    Then I see the text "Export to SD card completed successfully." # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+    And I scroll down                                               # calabash-android-0.9.2/lib/calabash-android/steps/navigation_steps.rb:36
+    And I touch the "Import CSV" text                               # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:25
+    And I press the "IMPORT" button                                 # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I see the text "Import completed successfully"              # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+Feature: Create Car
+
+  Scenario: Create Car first time                                 # features/createCar.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario Outline: Create Car second time                        # features/createCar.feature:10
+    When I swipe left                                             # features/createCar.feature:11
+    And I touch the "Settings" text                               # features/createCar.feature:12
+    And I touch the "Cars" text                                   # features/createCar.feature:13
+    And I press "menu_add_car"                                    # features/createCar.feature:14
+    And I enter text <carname> into field with id "edt_name"      # features/createCar.feature:15
+    And I enter text "0" into field with id "edt_initial_mileage" # features/createCar.feature:16
+    And I press "menu_save"                                       # features/createCar.feature:17
+    Then I see the text <carname>                                 # features/createCar.feature:18
+
+    Examples: 
+      | carname |
+      | "car 1" |
+
+Feature: Create Fuel Type
+
+  Scenario: Create Car first time                                 # features/createFuelType.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario Outline: Create Fuel Type                                  # features/createFuelType.feature:10
+    When I swipe left                                                 # features/createFuelType.feature:11
+    And I touch the "Settings" text                                   # features/createFuelType.feature:12
+    And I touch the "Fuel Types" text                                 # features/createFuelType.feature:13
+    And I press "menu_add_fuel_type"                                  # features/createFuelType.feature:14
+    And I enter text <fuelName> into field with id "edt_name"         # features/createFuelType.feature:15
+    And I enter text <fuelCategory> into field with id "edt_category" # features/createFuelType.feature:16
+    And I press the "OK" button                                       # features/createFuelType.feature:17
+    Then I see the text <fuelName>                                    # features/createFuelType.feature:18
+    And I see the text <fuelCategory>                                 # features/createFuelType.feature:19
+
+    Examples: 
+      | fuelName | fuelCategory |
+      | "Terpel" | "Gas"        |
+
+Feature: Create Reminder
+
+  Scenario: Create Car first time                                 # features/createReminder.feature:3
+    When I press the "CREATE A CAR" button                        # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:1
+    And I enter text "car 0" into field with id "edt_name"        # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I enter text "0" into field with id "edt_initial_mileage" # calabash-android-0.9.2/lib/calabash-android/steps/enter_text_steps.rb:13
+    And I press "menu_save"                                       # calabash-android-0.9.2/lib/calabash-android/steps/press_button_steps.rb:17
+    Then I see the text "car 0"                                   # calabash-android-0.9.2/lib/calabash-android/steps/assert_steps.rb:1
+
+  Scenario Outline: Create Reminder                                      # features/createReminder.feature:10
+    When I swipe left                                                    # features/createReminder.feature:11
+    And I touch the "Settings" text                                      # features/createReminder.feature:12
+    And I touch the "Reminders" text                                     # features/createReminder.feature:13
+    And I press "menu_add_reminder"                                      # features/createReminder.feature:14
+    And I enter text <reminderName> into field with id "edt_title"       # features/createReminder.feature:15
+    And I touch the "After distance or time, whichever comes first" text # features/createReminder.feature:16
+    Then I see the text "After distance or time, whichever comes first"  # features/createReminder.feature:17
+    And I see the text "After distance"                                  # features/createReminder.feature:18
+    And I see the text "After time"                                      # features/createReminder.feature:19
+    And I touch the "After distance or time, whichever comes first" text # features/createReminder.feature:20
+    When I enter text <distance> into field with id "edt_after_distance" # features/createReminder.feature:21
+    And I enter text <time> into field with id "edt_after_time"          # features/createReminder.feature:22
+    And I scroll down                                                    # features/createReminder.feature:23
+    And I touch the "Day(s)" text                                        # features/createReminder.feature:24
+    Then I see the text "Day(s)"                                         # features/createReminder.feature:25
+    And I see the text "Year(s)"                                         # features/createReminder.feature:26
+    And I see the text "Month(s)"                                        # features/createReminder.feature:27
+    And I touch the "Day(s)" text                                        # features/createReminder.feature:28
+    When I enter text <mileage> into field with id "edt_start_mileage"   # features/createReminder.feature:29
+    And I press "menu_save"                                              # features/createReminder.feature:30
+    Then I see the text <reminderName>                                   # features/createReminder.feature:31
+    And I see the text "car 0"                                           # features/createReminder.feature:32
+
+    Examples: 
+      | reminderName | distance | time | mileage |
+      | "put gas"    | "30"     | "1"  | "1"     |
+
+19 scenarios (19 passed)
+192 steps (192 passed)
+3m16.868s
