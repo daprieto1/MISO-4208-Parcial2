@@ -143,6 +143,59 @@ El proceso a seguir para encontrar los defectos detectados en los mutantes es:
 |58 mutante|0/19|4m15.973s|SI||multiples errores visuales y java.lang.NullPointerException - [conclusiones mutante 58](resultados/58-mutante/README.md)|
 |59 mutante|17/19|4m11.121s|NO|138241ms|errores importando y exportando - [conclusiones mutante 59](resultados/59-mutante/README.md)|
 |60 mutante|17/19||NO|138241ms|errores importando y exportando - [conclusiones mutante 60](resultados/60-mutante/README.md)|
+|61 mutante|19/19|3m37.967s||||
+|62 mutante|6/19|4m48.480s|||multiples fallos en crear auto - [conclusiones mutante 62](resultados/62-mutante/README.md)|
+|63 mutante|19/19|3m17.817s||||
+|64 mutante|17/19|4m11.532s|||errores importando y exportando - [conclusiones mutante 64](resultados/64-mutante/README.md)|
+|65 mutante|19/19|3m14.848s||||
+|66 mutante|19/19|3m15.977s||||
+|67 mutante|19/19|3m25.318s||||
+|68 mutante|19/19|3m31.368s||||
+|70 mutante|19/19|3m26.774s||||
+|73 mutante|19/19|3m22.906s||||
+|74 mutante|19/19|3m29.291s||||
+|75 mutante|19/19|3m26.773s||||
+|76 mutante|19/19|3m19.805s||||
+|77 mutante|19/19|3m14.694s||||
+|78 mutante|19/19|3m23.838s||||
+|79 mutante|19/19|3m29.725s||||
+|80 mutante|19/19|3m21.524s||||
+|81 mutante|19/19|3m17.876s||||
+|82 mutante|19/19|3m16.232s||||
+|83 mutante|19/19|3m12.646s||||
+|84 mutante|19/19|3m13.605s||||
+|85 mutante|19/19|3m14.877s||||
+|86 mutante|19/19|3m13.947s||||
+|89 mutante|19/19|3m14.770s||||
+|92 mutante|19/19|3m16.465s||||
+|93 mutante|19/19|3m16.544s||||
+|94 mutante|19/19|3m12.437s||||
+|95 mutante|1/19|8m48.328s|||multiples fallos en crear auto - [conclusiones mutante 95](resultados/95-mutante/README.md)|
+|96 mutante|1/19|0m7.917s|||problemas iniciando el app - [conclusiones mutante 96](resultados/96-mutante/README.md)|
+|97 mutante|19/19|3m16.868s||||
+|98 mutante|19/19|3m18.528s||||
+|99 mutante|19/19|3m11.629s||||
+|123 mutante|19/19|3m15.174s||||
+|171 mutante|19/19|3m13.246s||||
+|251 mutante|19/19|3m15.957s||||
+|270 mutante|19/19|3m14.589s||||
+|292 mutante|19/19|3m14.262s||||
+|305 mutante|0/19|7m48.348s|||problemas iniciando el app - [conclusiones mutante 305](resultados/305-mutante/README.md)|
+|306 mutante|0/19|7m47.217s|||problemas iniciando el app - [conclusiones mutante 306](resultados/306-mutante/README.md)|
+|307 mutante|0/19|7m48.771s|||problemas iniciando el app - [conclusiones mutante 307](resultados/307-mutante/README.md)|
+|308 mutante|0/19|7m47.583s|||problemas iniciando el app - [conclusiones mutante 308](resultados/308-mutante/README.md)|
+|310 mutante|19/19|3m30.859s||||
+|325 mutante|19/19|3m18.630s||||
+|334 mutante|18/19|3m45.809s|||problemas creando auto con botón + - [conclusiones mutante 334](resultados/334-mutante/README.md)|
+|335 mutante|18/19|3m47.990s|||problemas creando tipo combustible - [conclusiones mutante 335](resultados/335-mutante/README.md)|
+|338 mutante|19/19|3m16.871s||||
+|340 mutante|19/19|3m13.269s||||
+|341 mutante|19/19|3m20.177s||||
+|342 mutante|19/19|3m17.904s||||
+|346 mutante|/19|||||
+|347 mutante|/19|||||
+|352 mutante|/19|||||
+|354 mutante|/19|||||
 
 ## Issues en repositorio de Car Report
 
@@ -165,6 +218,16 @@ Y se produce generalmente después del evento:
 Usted puede acceder al issue en la siguiente [URL](https://bitbucket.org/frigus02/car-report/issues/93/random-testing)
 
 ![](assets/issue1.png)
+
+![](assets/issue2.png)
+
+### BDT
+
+Se ha creado un issue en el repositorio oficial de Car Report mencionando que sería buena idea incluir las pruebas de flujos completos construidas con cabalash como parte del proyecto, para de esta forma aumentar la solidez de la aplicación.
+
+Usted puede acceder al issue en la siguiente [URL](https://bitbucket.org/frigus02/car-report/issues/94/random-testing)
+
+![](assets/issue3.png)
 
 ## Referencias
 
