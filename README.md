@@ -109,6 +109,8 @@ El proceso a seguir para encontrar los defectos detectados en los mutantes es:
 
 ## Informe de Pruebas de Aceptación
 
+[informe](informe.pdf)
+
 ---
 
 Se realizo un informe completo de todas las funcionalidades disponibles sobre Car Report.
@@ -247,6 +249,19 @@ Se realizo una herramienta de automatización sobre comando bash que hace lo sig
 8. Guardar los resultados de random testing
 9. Limpiar
 
+## Prueba de usabilidad - Remoto sin facilitador
+
+1 usuario familiarizado con tecnología y aplicaciones Android, ejecutando la aplicación en su propio celular y de forma remota
+
+Comentarios sobre la aplicación Car Report
+
+- Sería útil un recorrido a forma de Demo al iniciar la aplicación, pues lo único qué hay al abrirla por primera vez es la opción de crear un Vehículo, sin siquiera saber las potencialidades después de crearlo
+- Al momento de comenzar a ingresar valores en las opciones de Recargas y Otros Gastos, las unidades vienen predeterminadas por ejemplo en km, EUR y litros; no se le sugiere al usuario configurar estas unidades a las que ya esté acostumbrado, y encontrar esas configuraciones el difícil en el menú izquierdo
+- En el menú izquierdo
+    - Opción “Ayuda” hay una opción llamada CSV en la cuál se muestra código sin una intención clara, que para un usuario del común puede resultar confuso
+    - En la opción “Calculadora” no se especifica para qué sirve o de donde debo extraer los datos necesarios para el cálculo, además después de ingresar un número a la calculadora, aparecen: el icono “+” para crear una Recarga, Otro ingreso u Otro gasto y unas gráfica vacía, por lo que no se observa utilidad alguna de la calculadora
+    - Tipos de combustible: La opción permite crear categorías de combustible con opción de poner un primer y un segundo nombre, este último no parece tener utilidad, además de que no se especifica para qué sirve nombrar el combustible dos veces
+
 ## Conclusiones
 
 ---
@@ -268,6 +283,13 @@ Se realizo una herramienta de automatización sobre comando bash que hace lo sig
 ### Usabilidad
 
 * Los comentarios de una persona que esta acostumbrada a manejar dispositivos móviles como Celulares de corte Android sobre la usabilidad de la aplicación no son buenos evidenciando grandes problemas conceptuales, cambios de moneda, navegabilidad y fácilidad para encontrar la información.
+
+### Ejecución de pruebas
+
+* El tiempo fue la mayor limitación para ejecutar las pruebas de forma completa.
+* El telefono queda con mucha basura entre ejecució y ejecución, así que se recomienda eliminar y volver a crear el dispositivo virtual, pero este proceso ubiese tomado mucho más tiempo para la ejecución de 1 solo mutante.
+* Con más tiempo se recomienda hacer pruebas de regresión visual para evaluar las gráficas.
+* Los mutantes más fáciles de detectar con random testing tenian que ver con los selectores de fechas y pintado de gráficas.
 
 ## Referencias
 
